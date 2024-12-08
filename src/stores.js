@@ -81,12 +81,12 @@ class tileData {
     }
 }
 
-export const GRIDSIZEX = 50;
-export const GRIDSIZEY = 50;
+export const GRIDSIZEX = 25;
+export const GRIDSIZEY = 25;
 
 class gridData {
     constructor() {
-        this.grid = Array.from({ length: 50 }, () => new Array(50));
+        this.grid = Array.from({ length: GRIDSIZEY }, () => new Array(GRIDSIZEX));
 
         for (let y = 0; y < GRIDSIZEY; y++) {
             for (let x = 0; x < GRIDSIZEX; x++) {

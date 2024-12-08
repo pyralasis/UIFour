@@ -37,7 +37,7 @@
     flex-direction: column;
     height: 90%;
     justify-content: space-around;
-    background-color: wheat;
+    background-color: whitesmoke;
     border-radius: 10px;
     border: black 5px solid;
     padding: 10px;
@@ -45,7 +45,7 @@
   .right {
     display: flex;
     flex-direction: column;
-    background-color: wheat;
+    background-color: whitesmoke;
     border-radius: 10px;
     border: black 5px solid;
     height: 90%;

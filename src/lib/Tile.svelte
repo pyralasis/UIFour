@@ -76,14 +76,15 @@
         return false;
     }}
 >
-    {tileData.smokeProgress}
+    {Math.floor(tileData.smokeProgress / 10)}
 </div>
 
 <style>
     .tile {
         border: black 1px solid;
-        width: 10px;
-        height: 10px;
-        font-size: 10px;
+        width: 20px;
+        height: 20px;
+        /* font-size: 10px; */
+        user-select: none;
     }
 </style>
