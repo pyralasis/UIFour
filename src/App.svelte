@@ -1,47 +1,102 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  import Grid from "./lib/Grid.svelte";
+  import InfoPanel from "./lib/InfoPanel.svelte";
+  import Legend from "./lib/Legend.svelte";
+  import SignUp from "./lib/SignUp.svelte";
+  import Tile from "./lib/Tile.svelte";
+  import TileSelector from "./lib/TileSelector.svelte";
 </script>
 
 <main>
-  <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
+  <div class="left">
+    <InfoPanel></InfoPanel>
+    <SignUp></SignUp>
   </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
+  <div class="right">
+    <h1 id="map-title">Map</h1>
+    <div>
+      <div class="right-left">
+        <Grid></Grid>
+        <TileSelector></TileSelector>
+      </div>
+      <div class="right-right"><Legend></Legend></div>
+    </div>
   </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+  main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+  .left {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: space-around;
+    background-color: wheat;
+    border-radius: 10px;
+    border: black 5px solid;
+    padding: 10px;
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
+  .right {
+    display: flex;
+    flex-direction: column;
+    background-color: wheat;
+    border-radius: 10px;
+    border: black 5px solid;
+    height: 90%;
+    padding: 10px;
   }
-  .read-the-docs {
-    color: #888;
+  .right-left,
+  .right-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right {
+    align-items: center;
+    justify-content: center;
+  }
+
+  #map-title {
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+
+  :root {
+    background: linear-gradient(
+      to bottom right,
+      rgb(147, 255, 147),
+      rgb(97, 52, 33)
+    );
+  }
+
+  :global(body) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  :global(#app) {
+    /* align-items: start; */
+    display: flex;
+    position: fixed;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
   }
 </style>
