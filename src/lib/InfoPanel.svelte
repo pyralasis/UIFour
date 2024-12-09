@@ -13,7 +13,7 @@
 
 <div class="info-container">
     <div class="description-container">
-        <h1>Wild Fire Tracker</h1>
+        <h1>Wildfire Tracker</h1>
         <p>
             This is a tracker used to inform users about approaching wildfires.
             It uses a Simulated Wildfire Map to show how wildfires and wildfire
