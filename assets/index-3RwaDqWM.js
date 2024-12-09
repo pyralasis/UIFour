@@ -3,7 +3,7 @@
                 indoors or evacuating! Keep an eye out for fire spreading to a
                 neighboring area!</div>`),Bn=N('<div class="high svelte-1vc5lhe">There is fire in the area. EVACUATE NOW!</div>'),Wn=N(`<div class="medium svelte-1vc5lhe">There is smoke in the area. Strongly consider staying indoors or
                 evacuating! Keep an eye out for fire spreading to a neighboring
-                area or your current area!</div>`),Gn=N(`<div class="info-container svelte-1vc5lhe"><div class="description-container svelte-1vc5lhe"><h1 class="svelte-1vc5lhe">Wild Fire Tracker</h1> <p class="svelte-1vc5lhe">This is a tracker used to inform users about approaching wildfires.
+                area or your current area!</div>`),Gn=N(`<div class="info-container svelte-1vc5lhe"><div class="description-container svelte-1vc5lhe"><h1 class="svelte-1vc5lhe">Wildfire Tracker</h1> <p class="svelte-1vc5lhe">This is a tracker used to inform users about approaching wildfires.
             It uses a Simulated Wildfire Map to show how wildfires and wildfire
             smoke can spread. It displays relevant information for your location
             in regard to any nearby fire or smoke. Select a tile type to draw on
