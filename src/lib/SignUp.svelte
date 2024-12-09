@@ -46,4 +46,7 @@
 </div>
 
 <style>
+    button {
+        border: black 1px solid;
+    }
 </style>

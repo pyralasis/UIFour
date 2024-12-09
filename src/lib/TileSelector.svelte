@@ -1,5 +1,5 @@
 <script>
-    import { selectedTileType, Tiles, gridMap } from "../stores";
+    import { selectedTileType, Tiles, gridMap, display } from "../stores";
 
     const setSelectedTile = (tileType) => {
         $selectedTileType = tileType;
@@ -31,6 +31,24 @@
     <button on:click={() => setSelectedTile(Tiles.FOREST)}>Forest</button>
     <button on:click={() => setSelectedTile(Tiles.FIRE)}>Fire</button>
     <button on:click={() => setSelectedTile(Tiles.CITY)}>City</button>
+
+    <div style="border-left:1px solid #000;height:40px"></div>
+
+    <button
+        on:click={() => {
+            console.log($display);
+            let disp = $display;
+            if (disp == 0) {
+                $display = 1;
+            }
+            if (disp == 1) {
+                $display = 2;
+            }
+            if (disp == 2) {
+                $display = 0;
+            }
+        }}>Display</button
+    >
 </div>
 
 <style>

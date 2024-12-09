@@ -3,14 +3,6 @@
     import Tile from "./Tile.svelte";
     let myGridMap = $gridMap;
     let gridData = myGridMap.grid;
-    $: a = $gridMap.grid[0][0].smokeProgress;
-    // let intervalUpdate = () => {
-    //     myGridMap.updateGrid();
-    //     // gridMap.set(myGridMap);
-    //     $gridMap = myGridMap;
-    //     console.log(myGridMap);
-    // };
-    // setInterval(intervalUpdate, $gridMap.timeStep);
 </script>
 
 <div
@@ -19,6 +11,7 @@
         return false;
     }}
 >
+    <!-- create the grid -->
     {#each gridData as row, y}
         <div
             class="row"

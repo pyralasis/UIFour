@@ -1,5 +1,5 @@
 <script>
-    import { gridMap, selectedTileType, Tiles } from "../stores";
+    import { gridMap, selectedTileType, Tiles, display } from "../stores";
     import { onMount, onDestroy } from "svelte";
 
     export let coordsX;
@@ -92,7 +92,12 @@
         return false;
     }}
 >
-    {Math.floor(tileData.smokeProgress / 10)}
+    {#if $display == 1}
+        {Math.floor(tileData.fireProgress / 10)}
+    {/if}
+    {#if $display == 2}
+        {Math.floor(tileData.smokeProgress / 10)}
+    {/if}
 </div>
 
 <style>

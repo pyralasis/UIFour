@@ -190,3 +190,5 @@ class gridData {
 export const gridMap = writable(new gridData)
 
 export const selectedTileType = writable(Tiles.EMPTY)
+
+export const display = writable(0)

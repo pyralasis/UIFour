@@ -16,9 +16,7 @@
       <h1 id="map-title">Map</h1>
       <Grid></Grid>
       <TileSelector></TileSelector>
-      <hr />
       <Legend></Legend>
-      <hr />
       <div>One square represents one square mile of land</div>
     </div>
   </div>
@@ -93,18 +91,6 @@
   #map-title {
     margin: 0;
     padding: 0;
-  }
-
-  /* got this HR style online */
-  hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.75),
-      rgba(0, 0, 0, 0)
-    );
   }
 
   :root {

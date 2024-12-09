@@ -18,7 +18,11 @@
             This is a tracker used to inform users about approaching wildfires.
             It uses a Simulated Wildfire Map to show how wildfires and wildfire
             smoke can spread. It displays relevant information for your location
-            in regard to any nearby fire or smoke.
+            in regard to any nearby fire or smoke. Select a tile type to draw on
+            the map. The start button will begin the simulation. Fire spreads to
+            trees. Smoke spreads to every tile. Smoke spreads from smoke and
+            fire tiles. The display button toggles between none, fire, and smoke
+            levels.
         </p>
     </div>
 
@@ -104,7 +108,7 @@
     .alerts-container {
         display: flex;
         flex-direction: column;
-        flex-basis: 500px;
+        flex-basis: 450px;
     }
     .none {
         display: flex;
