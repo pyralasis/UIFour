@@ -8,20 +8,21 @@
 </script>
 
 <main>
-  <div class="left">
-    <InfoPanel></InfoPanel>
-    <SignUp></SignUp>
-  </div>
-  <div class="right">
-    <h1 id="map-title">Map</h1>
-    <div>
-      <div class="right-left">
-        <Grid></Grid>
-        <TileSelector></TileSelector>
-      </div>
-      <div class="right-right"><Legend></Legend></div>
+  <div class="top">
+    <div class="left">
+      <InfoPanel></InfoPanel>
+    </div>
+    <div class="right">
+      <h1 id="map-title">Map</h1>
+      <Grid></Grid>
+      <TileSelector></TileSelector>
+      <hr />
+      <Legend></Legend>
+      <hr />
+      <div>One square represents one square mile of land</div>
     </div>
   </div>
+  <div class="bottom"><SignUp></SignUp></div>
 </main>
 
 <style>
@@ -29,14 +30,39 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 3%;
     width: 100%;
+    flex-wrap: wrap;
+  }
+  .top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+  .bottom {
+    display: flex;
+    flex-basis: 1500px;
+    min-width: 800px;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: black 5px solid;
+    padding: 10px;
   }
   .left {
     display: flex;
+    flex-basis: 500px;
+    min-width: 800px;
     flex-direction: column;
-    height: 90%;
-    justify-content: space-around;
+    min-height: 90%;
+    /* justify-content: space-around; */
     background-color: whitesmoke;
     border-radius: 10px;
     border: black 5px solid;
@@ -44,11 +70,13 @@
   }
   .right {
     display: flex;
+    flex-basis: 600px;
+    min-width: 550px;
     flex-direction: column;
     background-color: whitesmoke;
     border-radius: 10px;
     border: black 5px solid;
-    height: 90%;
+    min-height: 90%;
     padding: 10px;
   }
   .right-left,
@@ -63,8 +91,20 @@
   }
 
   #map-title {
-    margin: 10px 0;
-    padding: 10px 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* got this HR style online */
+  hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0)
+    );
   }
 
   :root {
@@ -98,5 +138,6 @@
     padding: 20px;
     margin: 0;
     text-align: center;
+    overflow-y: auto;
   }
 </style>

@@ -63,12 +63,28 @@
     on:mousedown={() => {
         currentTileType = $selectedTileType;
         gridData[coordsY][coordsX].tileType = currentTileType;
+        if (currentTileType == Tiles.FIRE) {
+            gridData[coordsY][coordsX].fireProgress = 100;
+            gridData[coordsY][coordsX].smokeProgress = 300;
+        }
+        if (currentTileType == Tiles.EMPTY) {
+            gridData[coordsY][coordsX].fireProgress = 0;
+            gridData[coordsY][coordsX].smokeProgress = 0;
+        }
         $gridMap.grid = gridData;
     }}
     on:mouseenter={() => {
         if (isLeftButtonPressed) {
             currentTileType = $selectedTileType;
             gridData[coordsY][coordsX].tileType = currentTileType;
+            if (currentTileType == Tiles.FIRE) {
+                gridData[coordsY][coordsX].fireProgress = 100;
+                gridData[coordsY][coordsX].smokeProgress = 300;
+            }
+            if (currentTileType == Tiles.EMPTY) {
+                gridData[coordsY][coordsX].fireProgress = 0;
+                gridData[coordsY][coordsX].smokeProgress = 0;
+            }
             $gridMap.grid = gridData;
         }
     }}

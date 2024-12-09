@@ -38,6 +38,9 @@ class tileData {
         if (this.tileType == Tiles.STRONG_SMOKE) {
             return true;
         }
+        if (this.smokeProgress > 100) {
+            return true
+        }
         return false;
     }
     isWeakSmoke() {
@@ -165,7 +168,9 @@ class gridData {
                 }
                 // Check for Smoke Progress
                 if (currentTile.isEmpty) {
-                    currentTile.smokeProgress += this.checkNeighboursSmoke(x, y);
+                    if (currentTile.smokeProgress < 300) {
+                        currentTile.smokeProgress += this.checkNeighboursSmoke(x, y);
+                    }
                     if (currentTile.isEmpty() && currentTile.smokeProgress >= 100) {
                         currentTile.tileType = Tiles.WEAK_SMOKE;
                     }
