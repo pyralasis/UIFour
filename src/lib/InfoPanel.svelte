@@ -14,44 +14,46 @@
 <div class="info-container">
     <div class="description-container">
         <h1>Wildfire Tracker</h1>
-        <p>
+        <p class="description">
             This is a tracker used to inform users about approaching wildfires.
             It uses a Simulated Wildfire Map to show how wildfires and wildfire
             smoke can spread. It displays relevant information for your location
             in regard to any nearby fire or smoke. Select a tile type to draw on
             the map. The start button will begin the simulation. Fire spreads to
-            trees. Smoke spreads to every tile. Smoke spreads from smoke and
-            fire tiles. The display button toggles between none, fire, and smoke
-            levels.
+            trees. Smoke spreads to every tile. The display button toggles
+            between none, fire, and smoke levels.
         </p>
     </div>
 
     <div class="address-container">
-        <h2>Enter Your Address</h2>
-        <div class="address-input">
-            <label for="x-addr">X: </label>
-            <input
-                id="x-addr"
-                type="number"
-                min="0"
-                max={GRIDSIZEX - 1}
-                bind:value={x}
-            />
+        <div id="address-entry">
+            <h2>Enter Your Address</h2>
+            <div class="address-input">
+                <label for="x-addr">X: </label>
+                <input
+                    id="x-addr"
+                    type="number"
+                    min="0"
+                    max={GRIDSIZEX - 1}
+                    bind:value={x}
+                />
+            </div>
+            <div class="address-input">
+                <label for="y-addr">Y: </label>
+                <input
+                    id="y-addr"
+                    type="number"
+                    min="0"
+                    max={GRIDSIZEY - 1}
+                    bind:value={y}
+                />
+            </div>
         </div>
-        <div class="address-input">
-            <label for="y-addr">Y: </label>
-            <input
-                id="y-addr"
-                type="number"
-                min="0"
-                max={GRIDSIZEY - 1}
-                bind:value={y}
-            />
+        <div id="address-stats">
+            <h2>Address Statistics</h2>
+            <p>Fire Level: {home.fireProgress}</p>
+            <p>Smoke Level: {home.smokeProgress}</p>
         </div>
-
-        <h2>Address Statistics</h2>
-        <p>Fire Level: {home.fireProgress}</p>
-        <p>Smoke Level: {home.smokeProgress}</p>
     </div>
 
     <div class="alerts-container">
@@ -100,10 +102,16 @@
         flex-direction: column;
         flex-basis: 100px;
     }
+
+    .description {
+        padding: 8px;
+    }
+
     .address-container {
         display: flex;
-        flex-direction: column;
-        flex-basis: 150px;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 50px 0;
     }
     .alerts-container {
         display: flex;

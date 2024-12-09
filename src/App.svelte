@@ -19,8 +19,8 @@
       <Legend></Legend>
       <div>One square represents one square mile of land</div>
     </div>
+    <div class="bottom"><SignUp></SignUp></div>
   </div>
-  <div class="bottom"><SignUp></SignUp></div>
 </main>
 
 <style>
@@ -29,7 +29,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 3%;
+    gap: 3% 3%;
     width: 100%;
     flex-wrap: wrap;
   }
@@ -38,14 +38,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 3%;
+    gap: 2vw 2vw;
     width: 100%;
-    height: 100%;
     flex-wrap: wrap;
   }
   .bottom {
     display: flex;
-    flex-basis: 1500px;
+    flex-basis: 1475px;
     min-width: 800px;
     flex-direction: column;
     justify-content: space-around;
@@ -53,13 +52,14 @@
     border-radius: 10px;
     border: black 5px solid;
     padding: 10px;
+    margin-bottom: 50px;
   }
   .left {
     display: flex;
     flex-basis: 500px;
     min-width: 800px;
     flex-direction: column;
-    min-height: 90%;
+    min-height: 85vh;
     /* justify-content: space-around; */
     background-color: whitesmoke;
     border-radius: 10px;
@@ -74,7 +74,7 @@
     background-color: whitesmoke;
     border-radius: 10px;
     border: black 5px solid;
-    min-height: 90%;
+    min-height: 85vh;
     padding: 10px;
   }
   .right-left,
@@ -118,12 +118,10 @@
     justify-content: center;
     width: 100%;
     max-width: 100%;
-    height: 100%;
     box-sizing: border-box;
     flex-direction: row;
     padding: 20px;
     margin: 0;
     text-align: center;
-    overflow-y: auto;
   }
 </style>
